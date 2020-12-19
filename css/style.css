@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
 html, body {
     height: 100%;
@@ -12,55 +12,49 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #000000;
+    background-color: #492540;
     color: #f0f0f0;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Jetbrains Mono', monospace;
 }
 
 h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin: 0;
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0 0 8px 0;
 }
 
 h2 {
-    font-size: 1.25em;
-    margin: 0;
-}
-
-p {
-    font-size: 1em;
+    font-size: 1.5em;
+    margin: 0 0 8px 0;
 }
 
 p.bio {
+    line-height: 1.5em;
+    width: 50%;
     margin: 0;
 }
 
+@media only screen and (max-width: 768px) {
+    p.bio {
+      width: 100%;
+    }
+}
+
 .social {
-    margin: 8px 0;
+    margin: 16px 0;
     display: flex;
     align-items: center;
 }
 
-.social p {
-    padding: 0;
-    margin: 0;
-}
-
-ul {
+.social ul {
     display: flex;
     padding: 0;
     margin: 0;
-}
-
-li {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
 }
 
 .social img {
     filter: brightness(0) invert(1);
-    width: 32px;
+    width: 48px;
     margin: 0 8px;
 }
