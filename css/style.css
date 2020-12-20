@@ -38,9 +38,32 @@ nav {
     margin: 1em;
 }
 
-.nav-item:hover {
+.nav-item:hover, .selected {
     padding-bottom: 3px;
     border-bottom: 3px solid #c03546;
+}
+
+@media only screen and (max-width: 768px) {
+    nav {
+        position: unset;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+    }
+    
+    .nav-item {
+        margin: 3px;
+    }
+    
+    .nav-item:hover, .selected {
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    .selected {
+        font-style: italic;
+    }
 }
 
 a {
