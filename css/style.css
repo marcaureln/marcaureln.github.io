@@ -13,8 +13,12 @@ body {
     flex-direction: column;
     justify-content: center;
     background-color: #492540;
-    color: #f0f0f0;
+    color: white;
     font-family: 'Jetbrains Mono', monospace;
+}
+
+.projects-body {
+    background-color: #f26d5b;
 }
 
 nav {
@@ -38,7 +42,7 @@ nav {
     margin: 1em;
 }
 
-.nav-item:hover, .selected {
+.nav-item:hover, .selected, .project a:hover {
     padding-bottom: 3px;
     border-bottom: 3px solid #c03546;
 }
@@ -86,6 +90,13 @@ p.bio {
     line-height: 1.5em;
     width: 50%;
     margin: 0;
+}
+
+.divider {
+    background-color: white;
+    width: 90%;
+    height: 3px;
+    margin: 16px 0;
 }
 
 @media only screen and (max-width: 768px) {
