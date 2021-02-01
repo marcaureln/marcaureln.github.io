@@ -21,6 +21,10 @@ body {
     background-color: #f26d5b;
 }
 
+.blog-body {
+    background-color: #581b98;
+}
+
 nav {
     position: absolute;
     top: 0;
@@ -94,7 +98,6 @@ p.bio {
 
 .divider {
     background-color: white;
-    width: 90%;
     height: 3px;
     margin: 16px 0;
 }
