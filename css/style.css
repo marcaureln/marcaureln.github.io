@@ -72,6 +72,10 @@ nav {
     .selected {
         font-style: italic;
     }
+
+    .work-in-progress img {
+        width: 100%
+    }
 }
 
 a {
