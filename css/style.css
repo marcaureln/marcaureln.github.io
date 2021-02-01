@@ -130,7 +130,7 @@ p.bio {
     margin: 0 12px 0 0;
 }
 
-.github {
+#github {
     filter: brightness(0) invert(1);
 }
 
