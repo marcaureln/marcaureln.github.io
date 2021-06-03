@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fafafa;
+  color: black;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 100%;
+}
+
+h1 {
+  font-family: 'Source Serif Pro', serif;
+  font-size: 4em;
+  margin: 0;
+}
+
+p,
+a {
+  font-size: 1.5em;
+}
+
+a {
+  font-family: 'Space Mono', monospace;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-style: italic;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin: 10px 0;
+}
+
+#location {
+  margin: 0;
+}
+
+#bio {
+  margin: 32px 0;
+}
+
+#pgp {
+  background-color: black;
+  color: white;
+  font-family: 'Space  Mono', monospace;
+  font-size: small;
+  position: fixed;
+  padding: 9px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+
+#pgp a {
+  color: white;
+  font-size: small;
+}
