@@ -65,13 +65,16 @@ a {
 }
 
 .projects__title {
-  margin-top: 3rem;
+  margin: 3rem 0 1rem;
 }
 
-.projects__list li {
+.projects__item {
   margin: 1rem 0;
-  list-style-type: none;
   font-size: 1.25rem;
+}
+
+.projects__item-desc {
+  color: #787e87;
 }
 
 footer {
@@ -103,7 +106,7 @@ footer a {
   }
 
   .socials__wrapper a:hover,
-  .projects__list a:hover {
+  .projects__item a:hover {
     color: #787e87;
   }
 
