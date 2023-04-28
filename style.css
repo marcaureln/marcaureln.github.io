@@ -1,9 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html,
@@ -14,68 +14,95 @@ body {
 }
 
 body {
+  border-top: 3px solid #fff;
   padding: 0 20vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fafafa;
-  font-family: "Source Sans Pro", sans-serif;
+  background-color: #070808;
+  color: #fff;
+  font-family: "Inconsolata", monospace;
   font-size: 100%;
 }
 
-h1 {
-  font-family: "Source Serif Pro", serif;
-}
-
-p {
-  font-size: 1rem;
+p,
+.socials__wrapper span {
+  font-size: 1.25rem;
   line-height: 1.8rem;
+  color: #787e87;
 }
 
 a {
-  font-family: monospace;
-  font-size: 1rem;
-  text-transform: lowercase;
   text-decoration: none;
-  color: black;
+  color: inherit;
+  transition: all 0.25s ease;
 }
 
-#bio {
-  margin-top: 2rem;
-}
-
-#projects li {
+#location {
+  color: #787e87;
   margin: 1rem 0;
-}
-
-#links {
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bio {
+  margin: 2rem 0 1rem;
+}
+
+.bio a {
+  border-bottom: 3px solid #787e87;
+}
+
+.bio a:hover {
+  border-bottom: 3px solid #fff;
+  color: #fff;
+}
+
+.socials__wrapper {
+  display: flex;
+  align-items: center;
   gap: 1rem;
-  padding: 0;
-  margin-top: 2rem;
+}
+
+.socials__wrapper span {
+  color: #787e87;
+}
+
+.socials__wrapper a:hover,
+.projects__list a:hover {
+  color: #787e87;
+}
+
+.projects__title {
+  margin-top: 3rem;
+}
+
+.projects__list li {
+  margin: 1rem 0;
   list-style-type: none;
-}
-
-#links a {
-  border-bottom: 3px solid #000;
-}
-
-.link--unavailable {
-  cursor: not-allowed;
+  font-size: 1.25rem;
 }
 
 footer {
-  background-color: black;
-  color: white;
-  font-family: monospace;
-  font-size: small;
+  font-size: smaller;
   position: fixed;
-  padding: 9px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  text-align: center;
+  padding: 0.5rem;
+  inset: auto 0 0 0;
   width: 100%;
+  transition: background-color 0.5s ease;
+}
+
+footer,
+#pgp-key {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+footer:hover {
+  background-color: #000;
 }
 
 footer a {
@@ -88,5 +115,13 @@ footer a {
     height: auto;
     padding: 10%;
     overflow: auto;
+  }
+
+  footer {
+    position: absolute;
+  }
+
+  #pgp-fingerprint {
+    display: none;
   }
 }
