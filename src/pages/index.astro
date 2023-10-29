@@ -1,0 +1,77 @@
+---
+import PageLayout from "@/layouts/Base";
+import PostPreview from "@/components/blog/PostPreview";
+import SocialList from "@/components/SocialList";
+import { getAllPosts, sortMDByDate } from "@/utils";
+
+const MAX_POSTS = 5;
+const allPosts = await getAllPosts();
+const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
+
+const projects: Array<{ title: string; desc: string; href: string }> = [
+	{
+		title: "Meditations",
+		desc: "A book's quote keeping Android app (Flutter)",
+		href: "https://play.google.com/store/apps/details?id=com.marcaureln.meditations",
+	},
+	{
+		title: "Adrili & Adrili Pro",
+		desc: "A Quality of Working Life (QWL) Android & iOS app (Flutter)",
+		href: "https://www.adrili.net/Telecharger-l-app-.LB.htm",
+	},
+	{
+		title: "Libshop",
+		desc: "A classified ads website for Liberia (Nuxt 3, Prisma, Postgres)",
+		href: "https://libshop.net",
+	},
+	{
+		title: "eCollectivités",
+		desc: "Bachelor's final year project (Nuxt 2, Express, Prisma, Postgres)",
+		href: "https://ecollectivites.marcaureln.com",
+	},
+];
+---
+
+<PageLayout meta={{ title: "Home" }}>
+	<section>
+		<h1 class="title mb-6">I'm Alex,</h1>
+		<p class="mb-4">
+			Web developer and co-founder of
+			<a href="https://inputstudio.co" target="_blank">Input Studio</a>. Machine Learning enthusiast
+			and privacy advocate.
+		</p>
+		<SocialList />
+	</section>
+	<section aria-label="Blog post list" class="mt-16">
+		<h2 class="title mb-4 text-xl">Posts</h2>
+		<ul class="space-y-4 sm:space-y-2">
+			{
+				allPostsByDate.map((p) => (
+					<li class="flex flex-col gap-x-2 sm:flex-row">
+						<PostPreview post={p} />
+					</li>
+				))
+			}
+		</ul>
+	</section>
+	<section class="mt-16">
+		<h2 class="title mb-4 text-xl">Projects</h2>
+		<ul class="space-y-4 sm:space-y-2">
+			{
+				projects.map(({ href, title, desc }) => (
+					<li>
+						<a
+							href={href}
+							target="_blank"
+							rel="noopener noreferrer"
+							class="cactus-link inline-block"
+						>
+							{title}
+						</a>
+						: <p class="inline-block sm:mt-2">{desc}</p>
+					</li>
+				))
+			}
+		</ul>
+	</section>
+</PageLayout>
