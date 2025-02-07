@@ -1,3 +1,4 @@
+@import url("https://api.fonts.coollabs.io/css2?family=Geist+Mono:wght@100..900&display=swap");
 /* would like to ignore ./src/pages/og-image/[slug].png.ts */
 @import "tailwindcss";
 /* config for tailwindcss-typography plugin */
@@ -14,6 +15,7 @@
 	--color-accent: oklch(55.27% 0.195 19.06);
 	--color-accent-2: oklch(18.15% 0 0);
 	--color-quote: oklch(55.27% 0.195 19.06);
+	--font-mono: "Geist Mono", sans-serif;
 }
 
 @layer base {
