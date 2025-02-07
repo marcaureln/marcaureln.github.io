@@ -5,6 +5,7 @@ import Masthead from "@/components/blog/Masthead.astro";
 import TOC from "@/components/blog/TOC.astro";
 import WebMentions from "@/components/blog/webmentions/index.astro";
 
+import { Icon } from "astro-icon/components";
 import BaseLayout from "./Base.astro";
 
 interface Props {
@@ -45,18 +46,7 @@ const readingTime: string = remarkPluginFrontmatter.readingTime;
 		id="to-top-btn"
 	>
 		<span class="sr-only">Back to top</span>
-		<svg
-			aria-hidden="true"
-			class="h-6 w-6"
-			fill="none"
-			focusable="false"
-			stroke="currentColor"
-			stroke-width="2"
-			viewBox="0 0 24 24"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<path d="M4.5 15.75l7.5-7.5 7.5 7.5" stroke-linecap="round" stroke-linejoin="round"></path>
-		</svg>
+		<Icon name="ph:arrow-up" class="h-6 w-6" focusable="false" />
 	</button>
 </BaseLayout>
 

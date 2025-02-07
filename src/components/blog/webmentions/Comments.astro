@@ -12,7 +12,7 @@ const { mentions } = Astro.props;
 const validComments = ["mention-of", "in-reply-to"];
 
 const comments = mentions.filter(
-	(mention) => validComments.includes(mention["wm-property"]) && mention.content?.text,
+	(mention) => validComments.includes(mention["wm-property"]) && mention.content?.text
 );
 ---
 
@@ -71,7 +71,7 @@ const comments = mentions.filter(
 										aria-hidden="true"
 										class="h-5 w-5"
 										focusable="false"
-										name="mdi:open-in-new"
+										name="ph:arrow-square-out"
 									/>
 								</a>
 							</div>
