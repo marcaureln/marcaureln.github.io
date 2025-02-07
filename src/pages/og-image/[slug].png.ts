@@ -1,13 +1,13 @@
-import type { APIContext, GetStaticPaths } from "astro";
 import { getEntryBySlug } from "astro:content";
-import satori, { type SatoriOptions } from "satori";
-import { html } from "satori-html";
-import { Resvg } from "@resvg/resvg-js";
 import { siteConfig } from "@/site-config";
 import { getAllPosts, getFormattedDate } from "@/utils";
+import { Resvg } from "@resvg/resvg-js";
+import type { APIContext, GetStaticPaths } from "astro";
+import satori, { type SatoriOptions } from "satori";
+import { html } from "satori-html";
 
-import RobotoMono from "@/assets/roboto-mono-regular.ttf";
 import RobotoMonoBold from "@/assets/roboto-mono-700.ttf";
+import RobotoMono from "@/assets/roboto-mono-regular.ttf";
 
 const ogOptions: SatoriOptions = {
 	width: 1200,
