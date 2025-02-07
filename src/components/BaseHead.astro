@@ -18,10 +18,13 @@ const socialImageURL = ogImage ? new URL(ogImage, Astro.url).href : null;
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 <title>{siteTitle}</title>
 
+{/* Fonts */}
+<link rel="preload" href="/GeistMono-Variable.woff2" as="font" type="font/woff2" crossorigin />
+
 {/* Icons */}
 <link href="/icon.svg" rel="icon" type="image/svg+xml" />
 <link href="/favicon.ico" rel="shortcut icon" />
-<link href="/icons/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
+<link href="/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180" />
 
 {/* Canonical URL */}
 <link href={canonicalURL} rel="canonical" />

@@ -26,13 +26,7 @@ export default defineConfig({
 	image: {
 		domains: ["webmention.io"],
 	},
-	integrations: [
-		expressiveCode(expressiveCodeOptions),
-		icon(),
-		sitemap(),
-		mdx(),
-		robotsTxt(),
-	],
+	integrations: [expressiveCode(expressiveCodeOptions), icon(), sitemap(), mdx(), robotsTxt()],
 	markdown: {
 		rehypePlugins: [
 			rehypeHeadingIds,
@@ -59,7 +53,7 @@ export default defineConfig({
 		optimizeDeps: {
 			exclude: ["@resvg/resvg-js"],
 		},
-		plugins: [tailwind(), rawFonts([".ttf", ".woff"])],
+		plugins: [tailwind(), rawFonts([".ttf", ".woff", ".woff2"])],
 	},
 	env: {
 		schema: {

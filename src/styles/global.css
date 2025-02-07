@@ -1,4 +1,3 @@
-@import url("https://api.fonts.coollabs.io/css2?family=Geist+Mono:wght@100..900&display=swap");
 /* would like to ignore ./src/pages/og-image/[slug].png.ts */
 @import "tailwindcss";
 /* config for tailwindcss-typography plugin */
@@ -6,6 +5,14 @@
 
 /* use a selector-based strategy for dark mode */
 @variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@font-face {
+	font-family: "Geist Mono";
+	src: url("/GeistMono-Variable.woff2") format("woff2-variations"); /* Important for variable fonts */
+	font-weight: normal; /* Or set a default weight if needed */
+	font-style: normal; /* Or set a default style if needed */
+	font-display: optional; /* Important to avoid FOIT */
+}
 
 /* you could refactor below to use light-dark(), depending on your target audience */
 @theme {
@@ -15,11 +22,12 @@
 	--color-accent: oklch(55.27% 0.195 19.06);
 	--color-accent-2: oklch(18.15% 0 0);
 	--color-quote: oklch(55.27% 0.195 19.06);
-	--font-mono: "Geist Mono", sans-serif;
+	--font-mono: "Geist Mono", monospace;
 }
 
 @layer base {
 	html {
+		font-display: block; /* Important to avoid FOIT */
 		color-scheme: light dark;
 		accent-color: var(--color-accent);
 
