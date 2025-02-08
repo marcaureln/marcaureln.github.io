@@ -2,10 +2,10 @@
 title: "devlog 0 building a saas"
 description: "i made a few bucks on a freelance project recently. so I decided to invest it in a saas."
 publishDate: "30 April 2023"
-tags: ["meditations-app", "saas", "build-in-public", "pocketbase", "traefik", "docker"]
+tags: ["meditations-app", "build-in-public", "saas"]
 coverImage:
   src: "./cover.png"
-  alt: ""
+  alt: "server architecture"
 ---
 
 I made a few bucks on a freelance project recently. On these platform, you rarely get your money as soon as you complete the gig. So, awaiting my payoff, I was wondering what am I going to buy. As, I said, it wasn't a lot, so I cannot afford something very “useful”. And, it hit me. I'm going to work that hard, and spent all the money I made, and work that hard again… You see where I'm going. As I was thinking about investing, I told myself, why not building a SaaS. SaaS stands for Software as a Service, it's a kind of subscription you pay to use a software, it's opposed to lifetime licenses, where, when you pay, the software is yours for life.
