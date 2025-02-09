@@ -1,5 +1,5 @@
-import RobotoMonoBold from "@/assets/roboto-mono-700.ttf";
-import RobotoMono from "@/assets/roboto-mono-regular.ttf";
+import GeistMonoBold from "@/assets/GeistMono-Bold.ttf";
+import GeistMono from "@/assets/GeistMono-Regular.ttf";
 import { getAllPosts } from "@/data/post";
 import { siteConfig } from "@/site.config";
 import { getFormattedDate } from "@/utils/date";
@@ -12,14 +12,14 @@ const ogOptions: SatoriOptions = {
 	// debug: true,
 	fonts: [
 		{
-			data: Buffer.from(RobotoMono),
-			name: "Roboto Mono",
+			data: Buffer.from(GeistMono),
+			name: "Geist Mono",
 			style: "normal",
 			weight: 400,
 		},
 		{
-			data: Buffer.from(RobotoMonoBold),
-			name: "Roboto Mono",
+			data: Buffer.from(GeistMonoBold),
+			name: "Geist Mono",
 			style: "normal",
 			weight: 700,
 		},
