@@ -2,7 +2,7 @@
 title: "devlog 0 building a saas"
 description: "i made a few bucks on a freelance project recently. so I decided to invest it in a saas."
 publishDate: "30 April 2023"
-tags: ["meditations-app", "build-in-public", "saas"]
+tags: ["build-in-public", "cloud"]
 coverImage:
   src: "./cover.png"
   alt: "server architecture"
