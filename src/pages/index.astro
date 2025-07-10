@@ -13,33 +13,36 @@ const allPostsByDate = allPosts
 	.sort(collectionDateSort)
 	.slice(0, MAX_POSTS) as CollectionEntry<"post">[];
 
-// Projects
-const projects: Array<{ title: string; desc: string; href: string }> = [
-	{
-		title: "Meditations",
-		desc: "A book's quote keeping Android app (Flutter, PocketBase)",
-		href: "https://play.google.com/store/apps/details?id=com.marcaureln.meditations",
-	},
-	{
-		title: "Adrili & Adrili Pro",
-		desc: "A Quality of Working Life (QWL) Android & iOS app (Flutter)",
-		href: "https://www.adrili.net/Telecharger-l-app-.LB.htm",
-	},
-	{
-		title: "Libshop",
-		desc: "A classified ads website for Liberia (Nuxt 3, Prisma, Postgres)",
-		href: "https://libshop.net",
-	},
-	{
-		title: "CID (ESATIC)",
-		desc: "University's research center website (Nuxt 3, PocketBase)",
-		href: "https://cid.esatic.ci",
-	},
-	{
-		title: "eCollectivités",
-		desc: "Bachelor's final year project (Nuxt 2, Express, Prisma, Postgres)",
-		href: "https://ecollectivites.marcaureln.com",
-	},
+// Companies
+const companies: Array<{ title: string; href?: string }> = [
+  {
+    title: "Adrili (🇨🇮)",
+    href: "https://www.adrili.com/",
+  },
+  {
+    title: "Agence Foncière Rurale (🇨🇮)",
+    href: "https://afor.ci/",
+  },
+  {
+    title: "Ares Music Group (🇺🇸)",
+    href: "https://aresmusicgroup.com/",
+  },
+  {
+    title: "BNETD (🇨🇮)",
+    href: "https://www.bnetd.ci.",
+  },
+  {
+    title: "Bunt (🇬🇧)",
+    href: "https://www.buntlabs.com/",
+  },
+  {
+    title: "Côte d'Ivoire Énergies (🇨🇮)",
+    href: "https://www.cinergies.ci/",
+  },
+  {
+    title: "Laguna Dental Arts (🇺🇸)",
+    href: "https://lagunadentalarts.com/",
+  },
 ];
 ---
 
@@ -53,7 +56,7 @@ const projects: Array<{ title: string; desc: string; href: string }> = [
 	</section>
 	<section class="mt-16">
 		<h2 class="title text-accent mb-1 text-xl"><a href="/posts/">Recent writing</a></h2>
-		<p class="mb-6 text-sm">I publish whenever I can (or more precisely, whenever I feel brave enough)</p>
+		<p class="mb-6">I publish whenever I can (or more precisely, whenever I feel brave enough)</p>
 		<ul class="space-y-4" role="list">
 			{
 				allPostsByDate.map((p) => (
@@ -65,23 +68,18 @@ const projects: Array<{ title: string; desc: string; href: string }> = [
 		</ul>
 	</section>
 	<section class="mt-16">
-		<h2 class="title text-accent mb-6 text-xl">Projects</h2>
-		<ul class="space-y-4 sm:space-y-2">
+		<h2 class="title text-accent mb-1 text-xl">Some companies I've worked with</h2>
+		<p class="leading-relaxed">
 			{
-				projects.map(({ href, title, desc }) => (
-					<li>
-						<a
-							href={href}
-							target="_blank"
-							rel="noopener noreferrer"
-							class="cactus-link inline-block"
-						>
+				companies.map(({ href, title }, idx) => (
+					<>
+						<a href={href} target="_blank" rel="noopener noreferrer" class="inline-block">
 							{title}
 						</a>
-						: <p class="inline-block sm:mt-2">{desc}</p>
-					</li>
+						{idx < companies.length - 1 && <span> &middot; </span>}
+					</>
 				))
 			}
-		</ul>
+		</p>
 	</section>
 </PageLayout>
