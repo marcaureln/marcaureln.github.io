@@ -7,7 +7,7 @@ import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
 // Posts
-const MAX_POSTS = 10;
+const MAX_POSTS = 5;
 const allPosts = await getAllPosts();
 const allPostsByDate = allPosts
 	.sort(collectionDateSort)
@@ -46,13 +46,14 @@ const projects: Array<{ title: string; desc: string; href: string }> = [
 <PageLayout meta={{ title: "Home" }}>
 	<section>
 		<p class="mb-6 leading-loose">
-			AI Engineer, Web Developer & Tech Entrepreneur. Passionate about automating stuff and
-			building blazing-fast web applications. I run, read, and break things on GitHub.
+			AI Engineer, Web Developer & Tech Entrepreneur. Passionate about automating stuff and building
+			blazing-fast web applications. I run, read, and break things on GitHub.
 		</p>
 		<SocialList />
 	</section>
 	<section class="mt-16">
-		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Posts</a></h2>
+		<h2 class="title text-accent mb-1 text-xl"><a href="/posts/">Recent writing</a></h2>
+		<p class="mb-6 text-sm">I publish whenever I can (or more precisely, whenever I feel brave enough)</p>
 		<ul class="space-y-4" role="list">
 			{
 				allPostsByDate.map((p) => (
