@@ -6,10 +6,10 @@ import "@/styles/global.css";
 
 type Props = SiteMeta;
 
-const { articleDate, description, ogImage, title } = Astro.props;
+const { articleDate, description, ogImage, title, titleTemplate = true } = Astro.props;
 
 const titleSeparator = "•";
-const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
+const siteTitle = titleTemplate ? `${title} ${titleSeparator} ${siteConfig.title}` : title;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = ogImage ? new URL(ogImage, Astro.url).href : null;
 ---
