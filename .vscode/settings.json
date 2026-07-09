@@ -1,20 +1,21 @@
 {
-	"[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[javascriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-	"editor.formatOnSave": true,
-	"prettier.documentSelectors": ["**/*.astro"],
-	"editor.codeActionsOnSave": {
-		"source.organizeImports": "never",
-		"source.organizeImports.biome": "explicit",
-		"quickfix.biome": "explicit"
-	},
-	"[markdown]": {
-		"editor.wordWrap": "on"
-	},
-	"typescript.tsdk": "node_modules/typescript/lib",
-	"astro.content-intellisense": true
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "eslint.useFlatConfig": true,
+  "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[jsonc]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[yaml]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[css]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.formatOnSave": false
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "js/ts.tsdk.path": "node_modules/typescript/lib"
 }

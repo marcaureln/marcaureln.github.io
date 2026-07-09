@@ -1,0 +1,42 @@
+intro: >-
+  Software engineer. I've built apps for fintech, the music industry, and healthcare. 
+  I do infra full-time. I think I have good taste, but I'm not a designer (sadly). 
+  Based in Abidjan 🇨🇮
+
+socials:
+  - name: github
+    href: https://github.com/marcaureln
+  - name: email
+    href: mailto:alexmarcaureln@gmail.com
+
+projects:
+  - name: Flow
+    description: Budgeting app for Africa.
+    href: https://tryflow.me/
+
+work:
+  - name: Adrili
+    href: https://www.adrili.com/
+    logo: /logos/adrili.webp
+  - name: Ares Music Group
+    href: https://aresmusicgroup.com/
+    logo: /logos/amg.webp
+    tall: true
+  - name: Berkon Sound
+    href: https://berkonsound.com/
+    logo: /logos/berkon-sound.webp
+  - name: BNETD
+    href: https://www.bnetd.ci/
+    logo: /logos/bnetd.webp
+  - name: Bunt
+    href: https://www.buntlabs.com/
+    logo: /logos/bunt.webp
+  - name: Côte d'Ivoire Énergies
+    href: https://www.cinergies.ci/
+    logo: /logos/cienergies.webp
+  - name: Laguna Dental Arts
+    href: https://lagunadentalarts.com/
+    logo: /logos/lda.webp
+  - name: Revue
+    href: https://revuehq.app/
+    logo: /logos/revue.webp

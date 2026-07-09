@@ -1,8 +1,7 @@
-*.min.js
-node_modules
-
-# cache-dirs
-**/.cache
-
-pnpm-lock.yaml
+.nuxt
+.output
 dist
+node_modules
+pnpm-lock.yaml
+content/**/*.md
+public

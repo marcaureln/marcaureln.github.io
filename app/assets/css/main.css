@@ -1,0 +1,90 @@
+@import "tailwindcss";
+@import "./prose.css";
+@plugin "@tailwindcss/typography";
+
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@font-face {
+  font-family: "Geist Variable";
+  src: url("/fonts/GeistVariable.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Departure Mono";
+  src: url("/fonts/DepartureMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-bg: oklch(98.5% 0.002 250);
+  --color-fg: oklch(24% 0.006 250);
+  --color-muted: oklch(50% 0.01 250);
+  --color-border: oklch(89% 0.003 250);
+  --color-accent: oklch(50% 0.09 250);
+  --color-code: oklch(51% 0.17 25);
+  --color-surface: color-mix(in oklab, var(--color-fg) 3%, var(--color-bg));
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-pixel: "Departure Mono", ui-monospace, monospace;
+}
+
+[data-theme="dark"] {
+  --color-bg: oklch(17.5% 0.005 250);
+  --color-fg: oklch(90% 0.004 250);
+  --color-muted: oklch(64% 0.01 250);
+  --color-border: oklch(29% 0.006 250);
+  --color-accent: oklch(72% 0.1 250);
+  --color-code: oklch(74% 0.12 22);
+}
+
+@layer base {
+  html {
+    color-scheme: light dark;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+
+    &[data-theme="light"] {
+      color-scheme: light;
+    }
+
+    &[data-theme="dark"] {
+      color-scheme: dark;
+    }
+  }
+
+  ::selection {
+    background-color: var(--color-fg);
+    color: var(--color-bg);
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply font-pixel text-xs tracking-[0.15em] uppercase text-muted;
+  }
+
+  .meta-label {
+    @apply font-pixel text-xs tracking-wide text-muted;
+  }
+
+  .link-sweep {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 100% 0;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.15s ease;
+  }
+  .link-sweep:hover {
+    background-size: 100% 0.2em;
+  }
+}
