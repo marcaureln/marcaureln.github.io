@@ -31,15 +31,16 @@
   },
   "devDependencies": {
     "@types/hast": "^3.0.4",
-    "@types/node": "^22.13.1",
+    "@types/node": "^24.13.3",
     "prettier": "^3.9.4",
-    "typescript": "^7.0.2"
+    "typescript": "^5.9.3"
   },
   "engines": {
-    "node": ">=22.0.0"
+    "node": ">=24.0.0"
   },
   "volta": {
-    "node": "22.13.1"
+    "node": "24.15.0",
+    "pnpm": "11.11.0"
   },
-  "packageManager": "pnpm@11.8.0"
+  "packageManager": "pnpm@11.11.0"
 }
