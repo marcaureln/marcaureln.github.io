@@ -4,13 +4,13 @@ description: "i made a few bucks on a freelance project recently. so I decided t
 date: "2023-04-30"
 tags: ["build-in-public", "cloud"]
 coverImage:
-  src: "/images/devlog-0/cover.png"
+  src: "/images/posts/devlog-0-building-a-saas/cover.webp"
   alt: "server architecture"
 ---
 
 I made a few bucks on a freelance project recently. On these platforms, you rarely get your money as soon as you complete the gig. So, awaiting my payoff, I was wondering what am I going to buy. As I said, it wasn't a lot, so I couldn't afford something very “useful”. And, it hit me. I'm going to work that hard, and spent all the money I made, and work that hard again… You see where I'm going. As I was thinking about investing, I told myself, why not building a SaaS. SaaS stands for Software as a Service, it's a kind of subscription you pay to use a software, it's opposed to lifetime licenses, where, when you pay, the software is yours for life.
 
-![](/images/devlog-0/sass-vs-freelance.png)
+![](/images/posts/devlog-0-building-a-saas/sass-vs-freelance.webp)
 
 _With freelancing, I'll always have to put in a lot of work to earn the relatively same amount of money. Otherwise, with a SaaS, I'll put a lot of effort upfront and relax later._
 
@@ -27,25 +27,25 @@ _Pros and cons of using PocketBase._
 
 After not having to code a backend, I decided to add an API management solution called Kong[^3]. I wanted the following features: **rate limiting and caching**. It was mandatory for me. If my app is going into the wild, I want it to be prepared for that. I designed the following architecture:
 
-![](/images/devlog-0/desired-architecture.png)
+![](/images/posts/devlog-0-building-a-saas/desired-architecture.webp)
 
 _Desired backend architecture._
 
 The backend will be connected to Kong and the latter will be **reverse-proxied** by Caddy (precisely caddy-gen[^4], a great Docker image that automate caddy for Docker containers). Then, I started playing with the Kong Docker image. First disappointment: it needs Postgres or Cassandra (a column-oriented database) to run. Quickly got over it after digging into the docs and discovered the db-less mode. After spending many hours tweaking my `docker-compose.yml`, I found successively that the Kong Manager (their GUI admin dashboard) and rate limiting plugin wasn't available for the open sourced version. Just at this time, I wondered why I'm not using Traefik[^5] (Traefik is reverse proxy with automatic HTTPS like Caddy). Back in the day, I struggled to configure Traefik, this is why I switched to Caddy and was using it everywhere. But, I got Traefik to work not so long ago, therefor I checked it out, and it had all the Kong features I wanted, plus a very nice dashboard 😉.
 
-![](/images/devlog-0/final-architecture.png)
+![](/images/posts/devlog-0-building-a-saas/final-architecture.webp)
 
 _Traefik dashboard._
 
 Finally, I got this architecture[^6]:
 
-![](/images/devlog-0/traefik.png)
+![](/images/posts/devlog-0-building-a-saas/traefik.webp)
 
 _Actual backend architecture._
 
 Once my setup was working on `localhost`, I had to make it available through the Internet. I spun up my infrastructure with Terraform[^7] and Ansible[^8] on GCP[^9]. Spent like two days on this, writing IaC[^10]. Now that I have my backend up and running, it's time to dust off the mobile app. See you in the next one 😉
 
-![](/images/devlog-0/tweet.png)
+![](/images/posts/devlog-0-building-a-saas/tweet.webp)
 
 _At least I haven't failed 😅_
 
