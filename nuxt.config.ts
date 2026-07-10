@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   vite: { plugins: [tailwindcss()] },
   site: { url: site.url, name: site.title },
+  sitemap: { zeroRuntime: true },
   icon: {
     mode: "svg",
     serverBundle: { collections: ["lucide"] },
@@ -51,6 +52,12 @@ export default defineNuxtConfig({
     },
   },
 
-  routeRules: { "/**": { prerender: true, noScripts: true } },
+  features: { inlineStyles: true },
+  routeRules: {
+    "/**": { prerender: true, noScripts: true },
+    "/fonts/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
+    "/logos/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
+    "/images/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
+  },
   experimental: { payloadExtraction: false },
 });
