@@ -33,7 +33,8 @@ const posts = computed(() => data.value?.posts ?? []);
 
     <section class="mt-16">
       <h2 class="section-label">Projects</h2>
-      <ul class="mt-4 space-y-4">
+      <p class="mt-1 text-sm text-muted">Stuff I'm working on.</p>
+      <ul class="mt-3 space-y-4">
         <li v-for="project in projects" :key="project.name">
           <NuxtLink v-if="project.href" :to="project.href" target="_blank" class="link-sweep">
             {{ project.name }}
