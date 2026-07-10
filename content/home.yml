@@ -34,6 +34,7 @@ work:
   - name: Côte d'Ivoire Énergies
     href: https://www.cinergies.ci/
     logo: /logos/cienergies.webp
+    tall: true
   - name: Laguna Dental Arts
     href: https://lagunadentalarts.com/
     logo: /logos/lda.webp
