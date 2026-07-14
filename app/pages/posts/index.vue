@@ -16,7 +16,9 @@ const byYear = computed(() => {
 
 <template>
   <div>
-    <h1 class="text-lg font-medium">Posts</h1>
+    <NuxtLink to="/" class="meta-label hover:text-fg">← home</NuxtLink>
+
+    <h1 class="mt-8 text-lg font-medium">Posts</h1>
     <section v-for="[year, yearPosts] in byYear" :key="year" class="mt-10">
       <h2 class="section-label">{{ year }}</h2>
       <div class="mt-4">
