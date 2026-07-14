@@ -10,8 +10,11 @@ socials:
     href: mailto:alexmarcaureln@gmail.com
 
 projects:
+  - name: Via
+    description: Turn any Google Doc into a stable public PDF link.
+    href: https://getvia.io/
   - name: Flow
-    description: Budgeting app for Africa.
+    description: Budget app that automatically tracks your Mobile Money expenses.
     href: https://tryflow.me/
 
 work:
