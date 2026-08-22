@@ -15,7 +15,7 @@ defineProps<{
         <NuxtLink :to="`${site.repo}/commit/${entry.hash}`" target="_blank" class="shrink-0 hover:text-fg">
           {{ entry.hash }}
         </NuxtLink>
-        <span class="text-fg/70">{{ entry.message }}</span>
+        <span :title="entry.message" class="min-w-0 flex-1 basis-64 truncate text-fg/70">{{ entry.message }}</span>
       </li>
     </ol>
   </section>
