@@ -13,6 +13,7 @@ projects:
   - name: Via
     description: Turn any Google Doc into a stable public PDF link.
     href: https://getvia.io/
+    mark: via
   - name: Flow
     description: Budget app that automatically tracks your Mobile Money expenses.
     href: https://tryflow.me/

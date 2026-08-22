@@ -28,6 +28,7 @@
   --color-accent: oklch(50% 0.09 250);
   --color-code: oklch(51% 0.17 25);
   --color-surface: color-mix(in oklab, var(--color-fg) 3%, var(--color-bg));
+  --color-via: oklch(54.6% 0.245 262.881);
   --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
   --font-pixel: "Departure Mono", ui-monospace, monospace;
 }
@@ -39,6 +40,7 @@
   --color-border: oklch(29% 0.006 250);
   --color-accent: oklch(72% 0.1 250);
   --color-code: oklch(74% 0.12 22);
+  --color-via: oklch(70.7% 0.165 254.624);
 }
 
 @layer base {
@@ -75,6 +77,39 @@
 
   .meta-label {
     @apply font-pixel text-xs tracking-wide text-muted;
+  }
+
+  .via-mark rect {
+    fill: currentColor;
+    transition: fill 0.12s ease;
+  }
+  body:has(.via-link:hover) .via-mark rect {
+    fill: var(--color-via);
+  }
+  .via-mark rect:nth-child(3),
+  .via-mark rect:nth-child(4) {
+    transition-delay: 40ms;
+  }
+  .via-mark rect:nth-child(5),
+  .via-mark rect:nth-child(6) {
+    transition-delay: 80ms;
+  }
+  .via-mark rect:nth-child(7),
+  .via-mark rect:nth-child(8) {
+    transition-delay: 120ms;
+  }
+  .via-mark rect:nth-child(9) {
+    transition-delay: 160ms;
+  }
+  .via-mark rect:nth-child(10) {
+    transition-delay: 200ms;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .via-mark rect {
+      transition: none;
+      transition-delay: 0s;
+    }
   }
 
   .link-sweep {

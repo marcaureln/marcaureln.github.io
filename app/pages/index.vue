@@ -36,8 +36,15 @@ const posts = computed(() => data.value?.posts ?? []);
       <p class="mt-1 text-sm text-muted">Stuff I'm working on.</p>
       <ul class="mt-3 space-y-4">
         <li v-for="project in projects" :key="project.name">
-          <NuxtLink v-if="project.href" :to="project.href" target="_blank" class="link-sweep">
-            {{ project.name }}
+          <NuxtLink
+            v-if="project.href"
+            :to="project.href"
+            target="_blank"
+            class="inline-flex items-center gap-1.5"
+            :class="{ 'via-link': project.mark === 'via' }"
+          >
+            <span class="link-sweep">{{ project.name }}</span>
+            <ViaMark v-if="project.mark === 'via'" class="size-3.5" />
           </NuxtLink>
           <span v-else class="link-sweep">{{ project.name }}</span>
           <span class="ml-4 text-muted">{{ project.description }}</span>

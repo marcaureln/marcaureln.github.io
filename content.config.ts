@@ -23,7 +23,14 @@ export default defineContentConfig({
       schema: z.object({
         intro: z.string(),
         socials: z.array(z.object({ name: z.string(), href: z.string() })),
-        projects: z.array(z.object({ name: z.string(), description: z.string(), href: z.string().optional() })),
+        projects: z.array(
+          z.object({
+            name: z.string(),
+            description: z.string(),
+            href: z.string().optional(),
+            mark: z.string().optional(),
+          }),
+        ),
         work: z.array(
           z.object({
             name: z.string(),
