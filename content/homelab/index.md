@@ -7,8 +7,8 @@ description: A private, single-user set of self-hosted services run by Alex N'Gu
 for myself. It has one user: me. It is not a product, it is not for sale, and
 no account is offered to anyone else.
 
-It gives me one private dashboard over my own calendar, notes, and tasks,
-instead of four browser tabs.
+It gives me one private view over my own data, instead of a dozen browser
+tabs.
 
 ## Why it connects to Google
 
