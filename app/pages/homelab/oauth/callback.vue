@@ -1,7 +1,20 @@
 <script setup lang="ts">
+declare global {
+  interface Window {
+    __oauthQuery?: string;
+  }
+}
+
 useSeoMeta({
   title: "Hermes OAuth",
   robots: "noindex, nofollow",
+});
+
+// Hydrating this prerendered page clears the query string before any component
+// code runs, so ?code= is captured here instead: this tag is in the static HTML
+// and executes while the document parses, before the client bundle loads.
+useHead({
+  script: [{ innerHTML: "window.__oauthQuery=location.search;" }],
 });
 
 const code = ref("");
@@ -10,7 +23,7 @@ const ready = ref(false);
 const copied = ref(false);
 
 onMounted(() => {
-  const params = new URLSearchParams(window.location.search);
+  const params = new URLSearchParams(window.__oauthQuery ?? window.location.search);
   code.value = params.get("code") ?? "";
   // Google sends ?error=access_denied and no code when consent is refused.
   error.value = params.get("error") ?? "";
