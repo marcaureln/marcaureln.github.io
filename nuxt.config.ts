@@ -53,11 +53,13 @@ export default defineNuxtConfig({
   },
 
   // Nothing on the site links to these, so the prerender crawler cannot find them.
-  nitro: { prerender: { routes: ["/homelab", "/homelab/privacy", "/homelab/terms"] } },
+  nitro: { prerender: { routes: ["/homelab", "/homelab/privacy", "/homelab/terms", "/homelab/oauth/callback"] } },
 
   features: { inlineStyles: true },
   routeRules: {
     "/**": { prerender: true, noScripts: true },
+    // The only page that needs client-side JS: it reads the code out of the URL.
+    "/homelab/oauth/callback": { noScripts: false },
     "/fonts/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
     "/logos/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
     "/images/**": { headers: { "cache-control": "public, max-age=31536000, immutable" } },
