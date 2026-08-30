@@ -1,0 +1,12 @@
+# Single source of truth for what the app asks Google for.
+# Change this when the scopes change in Google Cloud. Both /homelab and
+# /homelab/privacy render it, so the two pages cannot disagree.
+# Phrase `use` in a neutral voice: it appears on a first-person page and a
+# third-person one.
+scopes:
+  - name: Google Calendar
+    use: read events, and create and change events
+  - name: Google Docs
+    use: read documents, and create and update them
+  - name: Google Tasks
+    use: read task lists, and create, change, and complete tasks

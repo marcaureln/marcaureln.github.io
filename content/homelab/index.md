@@ -12,10 +12,13 @@ instead of four browser tabs.
 
 ## Why it connects to Google
 
-My calendar, my documents, and my task lists live in my Google Account. With
-my permission, the homelab reads them and shows them to me on my own hardware,
-and writes back to them when I ask it to: it files tasks, updates notes, and
-puts events on my calendar. Nothing leaves my network.
+Some of my own work lives in my Google Account. With my permission, the
+homelab can:
+
+::scope-list
+
+It reads that data to answer my questions, and writes back to it when I ask it
+to. Nothing leaves my network.
 
 That data is used to show me my own data, and for nothing else. It is not
 sold, not shared with anyone, not used for advertising, and not used to train

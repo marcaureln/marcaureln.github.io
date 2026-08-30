@@ -14,14 +14,7 @@ Contact: [pa@marcaureln.com](mailto:pa@marcaureln.com)
 The app uses Google OAuth to reach the owner's own Google Account. It works
 with:
 
-- the account identifier, email address, and name, to sign the owner in and
-  confirm the account is his;
-- Google Calendar, to read the owner's events and to create and change events
-  on his own calendars;
-- Google Docs, to read documents the owner points it at and to create and
-  update documents on his behalf;
-- Google Tasks, to read his task lists and to create, change, and complete
-  tasks.
+::scope-list
 
 The app does not read Gmail and has no access to Google Drive beyond the
 documents named above. It never requests a restricted scope.
