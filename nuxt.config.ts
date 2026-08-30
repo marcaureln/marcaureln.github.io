@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   vite: { plugins: [tailwindcss()] },
   site: { url: site.url, name: site.title },
-  sitemap: { zeroRuntime: true, exclude: ["/homelab", "/homelab/**"] },
+  sitemap: { zeroRuntime: true, exclude: ["/homelab/**"] },
   icon: {
     mode: "svg",
     serverBundle: { collections: ["lucide"] },
