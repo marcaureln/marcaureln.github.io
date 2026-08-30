@@ -13,12 +13,9 @@ instead of four browser tabs.
 ## Why it connects to Google
 
 Some of my own work lives in my Google Account. With my permission, the
-homelab can:
-
-::scope-list
-
-It reads that data to answer my questions, and writes back to it when I ask it
-to. Nothing leaves my network.
+homelab reads it and shows it to me on my own hardware, and writes back to it
+when I ask. The Google consent screen lists exactly what I granted. Nothing
+leaves my network.
 
 That data is used to show me my own data, and for nothing else. It is not
 sold, not shared with anyone, not used for advertising, and not used to train

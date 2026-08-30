@@ -25,13 +25,6 @@ export default defineContentConfig({
         updatedAt: z.string().optional(),
       }),
     }),
-    scopes: defineCollection({
-      type: "data",
-      source: "homelab/scopes.yml",
-      schema: z.object({
-        scopes: z.array(z.object({ name: z.string(), use: z.string() })).min(1),
-      }),
-    }),
     home: defineCollection({
       type: "data",
       source: "home.yml",

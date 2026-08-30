@@ -11,13 +11,13 @@ Contact: [pa@marcaureln.com](mailto:pa@marcaureln.com)
 
 ## What the app accesses
 
-The app uses Google OAuth to reach the owner's own Google Account. It works
-with:
+The app signs in to the owner's own Google Account and works only with the
+data the owner grants at the Google consent screen. That screen lists every
+permission in full at the moment it is granted. The owner can review or
+withdraw them at any time at
+[myaccount.google.com/permissions](https://myaccount.google.com/permissions).
 
-::scope-list
-
-The app does not read Gmail and has no access to Google Drive beyond the
-documents named above. It never requests a restricted scope.
+The app does not read Gmail and never requests a restricted scope.
 
 ## What the app does with the data
 
