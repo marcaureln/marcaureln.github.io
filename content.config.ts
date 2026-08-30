@@ -17,6 +17,14 @@ export default defineContentConfig({
         changelog: z.array(z.object({ hash: z.string(), date: z.string(), message: z.string() })).default([]),
       }),
     }),
+    homelab: defineCollection({
+      type: "page",
+      source: "homelab/**/*.md",
+      schema: z.object({
+        // Populated at build time by the content:file:afterParse hook (nuxt.config.ts).
+        updatedAt: z.string().optional(),
+      }),
+    }),
     home: defineCollection({
       type: "data",
       source: "home.yml",

@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/main.css"],
   vite: { plugins: [tailwindcss()] },
   site: { url: site.url, name: site.title },
-  sitemap: { zeroRuntime: true },
+  sitemap: { zeroRuntime: true, exclude: ["/homelab", "/homelab/**"] },
   icon: {
     mode: "svg",
     serverBundle: { collections: ["lucide"] },
@@ -51,6 +51,9 @@ export default defineNuxtConfig({
       if (history) Object.assign(content, history);
     },
   },
+
+  // Nothing on the site links to these, so the prerender crawler cannot find them.
+  nitro: { prerender: { routes: ["/homelab", "/homelab/privacy", "/homelab/terms"] } },
 
   features: { inlineStyles: true },
   routeRules: {
