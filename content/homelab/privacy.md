@@ -11,8 +11,9 @@ Contact: [pa@marcaureln.com](mailto:pa@marcaureln.com)
 
 ## What the app accesses
 
-The app signs in to the owner's own Google Account and works only with the
-data the owner grants at the Google consent screen. That screen lists every
+The app signs in to the owner's own Google Account and reads and writes his
+Google Calendar, his Google Docs, and his Google Tasks. It works only with the
+data the owner grants at the Google consent screen, which lists every
 permission in full at the moment it is granted. The owner can review or
 withdraw them at any time at
 [myaccount.google.com/permissions](https://myaccount.google.com/permissions).
