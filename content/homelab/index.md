@@ -7,15 +7,15 @@ description: A private, single-user set of self-hosted services run by Alex N'Gu
 for myself. It has one user: me. It is not a product, it is not for sale, and
 no account is offered to anyone else.
 
-It replaces cloud services I would otherwise pay for: a dashboard, a photo
-archive, a file store, and backups.
+It gives me one private dashboard over my own calendar, notes, and tasks,
+instead of four browser tabs.
 
 ## Why it connects to Google
 
-Some of my own data still lives in my Google Account. With my permission, the
-homelab signs in to that account and shows me my own calendar, contacts, and
-photos on my own hardware. It also writes its own backup files to my Drive.
-Nothing leaves my network.
+My calendar, my documents, and my task lists live in my Google Account. With
+my permission, the homelab reads them and shows them to me on my own hardware,
+and writes back to them when I ask it to: it files tasks, updates notes, and
+puts events on my calendar. Nothing leaves my network.
 
 That data is used to show me my own data, and for nothing else. It is not
 sold, not shared with anyone, not used for advertising, and not used to train

@@ -11,20 +11,20 @@ Contact: [pa@marcaureln.com](mailto:pa@marcaureln.com)
 
 ## What the app accesses
 
-The app uses Google OAuth to read data from the owner's own Google Account:
+The app uses Google OAuth to reach the owner's own Google Account. It works
+with:
 
-- the account identifier, email address, name, and avatar, to sign the owner
-  in and confirm the account is his;
-- calendar events, read only, to show the owner his own schedule;
-- contact names, email addresses, and phone numbers, read only, to put names
-  against those events;
-- photos and albums, read only, to copy the owner's own library into his own
-  archive;
-- files in Google Drive that the app itself created, to write and read its own
-  backups. It cannot see any other file in the owner's Drive.
+- the account identifier, email address, and name, to sign the owner in and
+  confirm the account is his;
+- Google Calendar, to read the owner's events and to create and change events
+  on his own calendars;
+- Google Docs, to read documents the owner points it at and to create and
+  update documents on his behalf;
+- Google Tasks, to read his task lists and to create, change, and complete
+  tasks.
 
-The app does not read Gmail and does not have full access to Drive. It never
-requests a restricted scope.
+The app does not read Gmail and has no access to Google Drive beyond the
+documents named above. It never requests a restricted scope.
 
 ## What the app does with the data
 
