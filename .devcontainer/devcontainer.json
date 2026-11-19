@@ -1,0 +1,47 @@
+{
+  "name": "marcaureln.com",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "TZ": "UTC",
+      "CLAUDE_CODE_VERSION": "2.1.325",
+      "PNPM_VERSION": "11.11.0"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vue.volar",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "eslint.useFlatConfig": true,
+        "terminal.integrated.defaultProfile.linux": "zsh",
+        "terminal.integrated.profiles.linux": {
+          "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+          },
+          "zsh": {
+            "path": "zsh"
+          }
+        }
+      }
+    }
+  },
+  "remoteUser": "root",
+  "containerEnv": {
+    "NODE_OPTIONS": "--max-old-space-size=4096",
+    "CLAUDE_CONFIG_DIR": "/root/.claude",
+    "POWERLEVEL9K_DISABLE_GITSTATUS": "true",
+    "NUXT_TELEMETRY_DISABLED": "1"
+  },
+  "postCreateCommand": "pnpm install --frozen-lockfile"
+}
