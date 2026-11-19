@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/marcaureln/autopilot/main/schema/autopilot.schema.json",
+  "version": 1,
+  "merge": "manual",
+  "verify": {
+    "required": [
+      "lint",
+      "sast",
+      "deps-scan",
+      "secrets-scan"
+    ],
+    "commands": {
+      "lint": "pnpm lint"
+    }
+  }
+}
